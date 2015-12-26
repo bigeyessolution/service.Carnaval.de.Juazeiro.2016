@@ -1,0 +1,8 @@
+{
+    "drive": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "user": "usuario",
+    "database": "banco",
+    "password": "senha"
+}
