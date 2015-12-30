@@ -3,18 +3,18 @@ class Database extends PDO {
     protected static $db = FALSE;
     
     public function __construct () { 
-        $application = getConf();
+        $database = Application::getConf('database');
         
-        $database = getConf()['database'];
-        $host = getConf()['host'];
-        $port = getConf()['port'];
+        $dbname = $database->database;
+        $host = $database->host;
+        $port = $database->port;
         
         parent::__construct (
-            "mysql:dbname=$database;".
+            "mysql:dbname=$dbname;".
             "host=$host;".
             "port=$port;",
-            getConf()['user'],
-            getConf()['password']
+            $database->user,
+            $database->password
         );
     }
     
@@ -33,15 +33,14 @@ class Database extends PDO {
      *
      * @return
      */
-    public function select ($table, $params = false) { 
+    public function select ($table, $params = false) {
     	if ($params != false) {
     		$query = "SELECT * FROM $table WHERE $params";
     	} else {
     		$query = "SELECT * FROM $table";
     	}
-    	    	
         $result = $this->query($query, PDO::FETCH_ASSOC);
-                
+        
         return $result;
     }
     

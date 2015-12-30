@@ -17,14 +17,3 @@ class RESTObjectException extends Exception {
 		);
 	}
 }
-
-class RESTMethodNotImplemented extends RESTObjectException {
-	public function __construct ($object_name, $method_name = false) {
-		$message = 'Method '. $method_name ? $method_name.' ' : '' .
-		'not implemented';
-		
-		parent::__construct($message, 
-			RESTObjectException::METHOD_NOT_IMPLEMENTED
-			);
-	}
-}

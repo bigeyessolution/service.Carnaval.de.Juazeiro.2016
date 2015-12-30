@@ -23,5 +23,15 @@
  * @author vanlivre
  */
 class AbstractException extends Exception {
-    //put your code here
+    public function printJSON() {
+		header ('application/json');
+	}
+	
+	public function getJSON () {
+		$result = array(
+			'error' => $this->getCode(),
+			'message' => $this->getMessage(),
+			'object' => $this->getFile()
+		);
+	}
 }

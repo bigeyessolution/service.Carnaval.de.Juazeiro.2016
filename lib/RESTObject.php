@@ -36,8 +36,10 @@ abstract class RESTObject {
         if (RESTObject::$object === false) {
             $object_name = Router::getObjectName ();
             
-            if (file_exists(__DIR__."/REST/$object_name.php")) {
-                require_once __DIR__."/REST/$object_name.php";
+            if (file_exists(LIBDIR."/REST/$object_name.php")) {
+                require_once LIBDIR."/REST/$object_name.php";
+                
+                //Verificar parâmetros
                 
                 RESTObject::$object = new $object_name ();
             } else {

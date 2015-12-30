@@ -16,10 +16,10 @@ class Router {
         
         $uri = explode('/', $uri[0]);
         
-        if (count($uri) < 3 or $uri[2] == '') {
+        if (count($uri) < 2 or $uri[1] == '') {
         	Router::$objectName = 'Index';
         } else {
-        	Router::$objectName = $uri[2];
+        	Router::$objectName = $uri[1];
         }
         
         Router::$object = RESTObject::objectFactory ();

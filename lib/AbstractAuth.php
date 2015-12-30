@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Copyright (C) 2015 vanlivre
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,10 +17,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once '../environment.php';
-
-Router::init();
-
-Router::executeMethod();
-
-Router::getObject()->printJSON();
+/**
+ * Description of AbstractAuth
+ *
+ * @author vanlivre
+ */
+class AbstractAuth{
+    /**
+     * 
+     * @return boolean
+     */
+    public function checkAuth();
+}
