@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Copyright (C) 2015 vanlivre
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,24 +17,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-date_default_timezone_set ('America/Bahia');
-
-define("BASEDIR", __DIR__.'/');
-define ("CONFDIR", BASEDIR.'conf/');
-define ("LIBDIR", BASEDIR.'lib/');
-define ("RESTDIR", LIBDIR.'REST/');
-
-function __autoload ($class_name) {
-    require_once LIBDIR . "$class_name.php";
+/**
+ * Description of RESTMethodNotImplemented
+ *
+ * @author vanlivre
+ */
+class RESTMethodNotImplementedException extends RESTObjectException {
+	public function __construct ($object_name, $method_name = false) {
+		$message = 'Method '. $method_name ? $method_name.' ' : '' .
+		'not implemented';
+		
+		parent::__construct($message, 
+			RESTObjectException::METHOD_NOT_IMPLEMENTED
+			);
+	}
 }
-
-// - Required classes
-require_once \LIBDIR.'Application.php';
-require_once \LIBDIR.'Database.php';
-require_once \LIBDIR.'RESTObject.php';
-require_once \LIBDIR.'Exceptions/RESTObjectException.php';
-require_once \LIBDIR.'Exceptions/RESTMethodNotImplemented.php';
-require_once \LIBDIR.'Router.php';
-
-// - Other required scripts
-require_once \LIBDIR.'system_functions.php';

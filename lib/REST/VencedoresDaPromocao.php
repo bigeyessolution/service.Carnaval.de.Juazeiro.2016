@@ -24,7 +24,7 @@
  */
 class VencedoresDaPromocao extends RESTObject {
     public function DELETE() {
-        throw new RESTMethodNotImplemented ('VencedoresDaPromocao', 'DELETE');
+        throw new RESTMethodNotImplementedException ('VencedoresDaPromocao', 'DELETE');
     }
 
     public function GET() {
@@ -47,10 +47,10 @@ class VencedoresDaPromocao extends RESTObject {
     }
 
     public function POST() {
-        throw new RESTMethodNotImplemented ('VencedoresDaPromocao', 'POST');
+        throw new RESTMethodNotImplementedException ('VencedoresDaPromocao', 'POST');
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplemented ('VencedoresDaPromocao', 'PUT');
+        throw new RESTMethodNotImplementedException ('VencedoresDaPromocao', 'PUT');
     }
 }

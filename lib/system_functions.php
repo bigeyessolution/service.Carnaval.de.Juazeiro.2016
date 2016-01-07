@@ -17,3 +17,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+function verify_security_string ($string) {
+    return $string; //@todo concluir;
+}

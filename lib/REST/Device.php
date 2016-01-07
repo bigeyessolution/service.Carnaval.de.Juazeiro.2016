@@ -24,29 +24,31 @@
  */
 class Device extends RESTObject {
     public function DELETE() {
-        throw new RESTMethodNotImplemented ('Device', 'DELETE');
+        throw new RESTMethodNotImplementedException ('Device', 'DELETE');
     }
 
     public function GET() {
-        $db = Database::getDatabase();
-        
         $result = Array();
         
-        $params = $this->getParams();
+        $params = $this->getGetParams();
         
-        if ($params === FALSE) {
-            throw new RESTMethodNotImplemented ('Device', 'GET');
+        if ($params === FALSE) { 
+            throw new RESTMethodNotImplementedException ('Device', 'GET');
         }
         
         if ($params['iddevice']) {
             $where = 'iddevice = ' . $params['iddevice'];
         } elseif ($params['uuid']) {
             $where = 'uuid = ' . $params['uuid'];
+        } elseif ($params['serial']) {
+            $where = 'serial = ' . $params['serial'];
         }
+        
+        $db = Database::getDatabase();
         
         $st = $db->select('device', $where);
         //@TODO verificação
-        while ($row = $st->fetch(PDO::FETCH_ASSOC)) { 
+        while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
             $result [] = (object) $row;
         }
         //verificar se já votou no rei momo
@@ -54,10 +56,6 @@ class Device extends RESTObject {
             
         //            = $db->select('device', 'iddevice = ' . $params['iddevice']);
         //verificar se já votou na rainha
-        
-        
-        
-        
         
         $this->setResult (
             array (
@@ -68,14 +66,105 @@ class Device extends RESTObject {
     }
 
     public function POST() {
-        throw new RESTMethodNotImplemented ('Device', 'POST');
+        //autenticar app
+        
+        //throw new RESTMethodNotImplemented ('Device', 'POST');
+        $result = Array();
+        
+        $params = $this->getPostParams();
+        
+        if ($params === FALSE) { 
+            throw new RESTMethodNotImplementedException ('Device', 'POST');
+        }
+        
+        $flag_exists = false;
+        
+        $db = Database::getDatabase();
+        
+        if (trim(strtolower($params['platform'])) == 'android') {
+            //Verificando serial
+            $st_result = $db->query ("SELECT * FROM device WHERE serial = '${params['serial']}'")->fetch();
+            
+            $flag_exists = $st_result !== false;
+        } else {
+            $this->setResult(array(
+                'status' => 'ERROR',
+                'message' => 'Only Android devices are permited'
+            ));
+            
+            return;
+        }
+        
+        if ($flag_exists) {
+            $this->setResult(array(
+                'status' => 'ERROR',
+                'message' => 'Device is registered on database'
+            ));
+            
+            return;
+        }
+        
+        $st = $db->prepare ('INSERT INTO '
+                . 'device (uuid, serial, version, platform, model, hash_key)'
+                . 'VALUES (:uuid, :serial, :version, :platform, :model, :hash_key)');
+        
+        $params['hash_key'] = md5 ($params['uuid'].$params['model'].$params['serial']);
+        
+        foreach ($params as $field => $value) {
+            $result[$field] = $value;
+            $st->bindValue (':'.$field, $value);
+        }
+        
+        if ($st->execute ()) {
+            $this->setResult(array(
+                'status' => 'OK',
+                'iddevice' => $db->lastInsertId(),
+                'hash_key' => $params['hash_key']
+            )); 
+        } else {
+            $this->setResult($db->errorInfo());
+        }
+        
+        
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplemented ('Device', 'PUT');
+        throw new RESTMethodNotImplementedException ('Device', 'PUT');
     }
     
-    private function getParams () {
+    private function getPostParams () {
+        $params = array();
+        
+        if (isset($_POST['uuid'])) {
+            $params ['uuid'] = verify_security_string($_POST['uuid']);
+        }
+        
+//        if (isset($_POST['hash_key'])) {
+//            $params ['hash_key'] = verify_security_string($_POST['hash_key']);
+//        }
+        
+        if (isset($_POST['serial'])) {
+            $params ['serial'] = verify_security_string($_POST['serial']);
+        } else {
+            $params ['serial'] = '';
+        }
+        
+        if (isset($_POST['version'])) {
+            $params ['version'] = verify_security_string($_POST['version']);
+        }
+        
+        if (isset($_POST['platform'])) {
+            $params ['platform'] = verify_security_string($_POST['platform']);
+        }
+        
+        if (isset($_POST['model'])) {
+            $params ['model'] = verify_security_string($_POST['model']);
+        }
+        
+        return sizeof($params) > 0 ? $params : false ;
+    }
+    
+    private function getGetParams () {
         $params = array();
         
         if (isset($_GET['iddevice'])) {
@@ -88,6 +177,10 @@ class Device extends RESTObject {
         
         if (isset($_GET['hash_key'])) {
             $params ['hash_key'] = mysql_real_escape_string($_GET['hash_key']);
+        }
+        
+        if (isset($_GET['serial'])) {
+            $params ['serial'] = mysql_real_escape_string($_GET['serial']);
         }
         
         return sizeof($params) > 0 ? $params : false ;

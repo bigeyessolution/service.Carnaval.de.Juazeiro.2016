@@ -5,8 +5,10 @@ class RESTObjectException extends Exception {
 	const METHOD_NOT_IMPLEMENTED = 5555;
 	const MISSING_PARAMS = 6666;
 
-	public function printJSON() {
+	public function printResult() {
 		header ('application/json');
+                
+                print $this->getJSON();
 	}
 	
 	public function getJSON () {

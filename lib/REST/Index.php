@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2015 vanlivre
+ * Copyright (C) 2016 vanlivre
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,17 +18,30 @@
  */
 
 /**
- * Description of RESTMethodNotImplemented
+ * Description of Index
  *
  * @author vanlivre
  */
-class RESTMethodNotImplemented extends RESTObjectException {
-	public function __construct ($object_name, $method_name = false) {
-		$message = 'Method '. $method_name ? $method_name.' ' : '' .
-		'not implemented';
-		
-		parent::__construct($message, 
-			RESTObjectException::METHOD_NOT_IMPLEMENTED
-			);
-	}
+class Index extends RESTObject {
+
+    public function DELETE() {
+        throw new RESTMethodNotImplementedException ('Index', 'DELETE');
+    }
+
+    public function GET() {
+        $this->setContentType(self::HTML_CONTENT_TYPE);
+        
+        $this->setResult('<html><title>#CarnaJua2016</title><body>'
+                . ''
+                . '</body></html>');
+    }
+
+    public function POST() {
+        throw new RESTMethodNotImplementedException ('Index', 'POST');
+    }
+
+    public function PUT() {
+        throw new RESTMethodNotImplementedException ('Index', 'PUT');
+    }
+
 }

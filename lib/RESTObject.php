@@ -1,7 +1,13 @@
 <?php 
 
 abstract class RESTObject {
+    const JSON_CONTENT_TYPE = 'application/json';
+    const HTML_CONTENT_TYPE = 'text/html';
+    const TEXT_CONTENT_TYPE = 'text/plain';
+
     protected static $object = false;
+    
+    private $content_type = 'application/json';
     
     private $result = false;
     
@@ -26,9 +32,24 @@ abstract class RESTObject {
             );
     }
     
-    public function printJSON () {
-        header ('Content-Type: application/json');
+    protected function setContentType ($content_type) {
+        $this->content_type = $content_type;
+    }
+
+
+    public function printResult () {
+        header('Content-Type: ' . $this->content_type);
         
+        switch ($this->content_type) {
+            case self::JSON_CONTENT_TYPE:
+                print $this->getJSON();
+                break;
+            default :
+                print $this->result;
+        }
+    }
+    
+    public function printJSON () {        
         print $this->getJSON();
     }
     
@@ -36,8 +57,8 @@ abstract class RESTObject {
         if (RESTObject::$object === false) {
             $object_name = Router::getObjectName ();
             
-            if (file_exists(LIBDIR."/REST/$object_name.php")) {
-                require_once LIBDIR."/REST/$object_name.php";
+            if (file_exists(RESTDIR."$object_name.php")) {
+                require_once RESTDIR."$object_name.php";
                 
                 //Verificar parâmetros
                 

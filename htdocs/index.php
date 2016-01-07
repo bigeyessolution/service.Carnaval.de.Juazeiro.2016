@@ -19,8 +19,16 @@
 
 require_once '../environment.php';
 
-Router::init();
+try {
+    
+    Router::init();
 
-Router::executeMethod();
+    Router::executeMethod();
 
-Router::getObject()->printJSON();
+    Router::getObject()->printResult ();
+    
+} catch (RESTObjectException $rest_ex) {
+    $rest_ex->printResult();
+} catch (Exception $ex) {
+    
+}

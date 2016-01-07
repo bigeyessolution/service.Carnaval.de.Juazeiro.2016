@@ -29,8 +29,10 @@ class Application {
      * @return type
      */
     public static function checkPlainAuth () {
-        return isset($_GET['secret']) and
-            $_GET['secret'] == self::getConf('security')->secret;
+//        @TODO modificar para verificar se há o valor em um array
+//        return isset($_GET['secret']) and
+//            $_GET['secret'] == self::getConf('security')->secret; 
+        
     }
     
     public static function checkDeviceAuth () {

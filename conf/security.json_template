@@ -1,3 +1,6 @@
 {
-    "secret": "Insira_o_valor_para_autenticacao"
+    "secret": [
+            "Insira_o_valor_para_autenticacao",
+            "Insira_o_valor_para_autenticacao"
+        ]
 }

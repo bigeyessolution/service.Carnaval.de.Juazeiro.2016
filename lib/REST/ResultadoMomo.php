@@ -24,7 +24,7 @@
  */
 class ResultadoMomo extends RESTObject {
     public function DELETE() {
-        throw new RESTMethodNotImplemented ('ResultadoMomo', 'DELETE');
+        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'DELETE');
     }
 
     public function GET() {
@@ -47,10 +47,10 @@ class ResultadoMomo extends RESTObject {
     }
 
     public function POST() {
-        throw new RESTMethodNotImplemented ('ResultadoMomo', 'POST');
+        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'POST');
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplemented ('ResultadoMomo', 'PUT');
+        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'PUT');
     }
 }

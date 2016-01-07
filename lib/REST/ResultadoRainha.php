@@ -24,7 +24,7 @@
  */
 class ResultadoRainha extends RESTObject {
     public function DELETE() {
-        throw new RESTMethodNotImplemented ('ResultadoRainha', 'DELETE');
+        throw new RESTMethodNotImplementedException ('ResultadoRainha', 'DELETE');
     }
 
     public function GET() {
@@ -47,10 +47,10 @@ class ResultadoRainha extends RESTObject {
     }
 
     public function POST() {
-        throw new RESTMethodNotImplemented ('ResultadoRainha', 'POST');
+        throw new RESTMethodNotImplementedException ('ResultadoRainha', 'POST');
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplemented ('ResultadoRainha', 'PUT');
+        throw new RESTMethodNotImplementedException ('ResultadoRainha', 'PUT');
     }
 }
