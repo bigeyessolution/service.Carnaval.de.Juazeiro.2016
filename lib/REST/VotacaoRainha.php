@@ -60,9 +60,9 @@ class VotacaoRainha extends RESTObject {
     public function POST() {
         //Verificar se a votacao ainda esta em aberto
         
-        //Verificar autenticacao de secure key
+        (new SecureKeyAuth())->checkAuth();
         
-        //verificar autenticacao de iddevice e hash_key
+        (new SecureDeviceHash())->checkAuth();
         
         //verificar se iddedevice ainda nao votou
         
