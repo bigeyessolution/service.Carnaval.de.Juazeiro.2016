@@ -29,12 +29,12 @@ function __autoload ($class_name) {
 }
 
 // - Required classes
-require_once \LIBDIR.'Application.php';
-require_once \LIBDIR.'Database.php';
-require_once \LIBDIR.'RESTObject.php';
-require_once \LIBDIR.'Exceptions/RESTObjectException.php';
-require_once \LIBDIR.'Exceptions/RESTMethodNotImplemented.php';
-require_once \LIBDIR.'Router.php';
+//require_once \LIBDIR.'Application.php';
+//require_once \LIBDIR.'Database.php';
+//require_once \LIBDIR.'RESTObject.php';
+//require_once \LIBDIR.'Exceptions/RESTObjectException.php';
+//require_once \LIBDIR.'Exceptions/RESTMethodNotImplemented.php';
+//require_once \LIBDIR.'Router.php';
 
 // - Other required scripts
 require_once \LIBDIR.'system_functions.php';

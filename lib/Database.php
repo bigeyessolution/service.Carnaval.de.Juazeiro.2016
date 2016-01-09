@@ -39,8 +39,9 @@ class Database extends PDO {
     	} else {
     		$query = "SELECT * FROM $table";
     	}
-        $result = $this->query($query, PDO::FETCH_ASSOC);
         
+        $result = $this->query($query, PDO::FETCH_ASSOC);
+                
         return $result;
     }
     

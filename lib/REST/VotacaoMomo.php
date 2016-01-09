@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2015 vanlivre
+ * Copyright (C) 2016 vanlivre
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,13 +18,23 @@
  */
 
 /**
- * Description of ResultadoMomo
+ * Description of VotarRei
  *
  * @author vanlivre
  */
-class ResultadoMomo extends RESTObject {
-    public function DELETE() {
-        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'DELETE');
+class VotacaoMomo extends RESTObject {
+    private $votacao;
+    
+    public function __construct() {
+        $fimvotacao = Application::getConf('votacao')->fim;
+        
+        $agora = time();
+        
+        $this->votacao = $agora <= $fimvotacao;
+    }
+
+        public function DELETE() {
+        throw new RESTMethodNotImplementedException ('VotarMomo', 'DELETE');
     }
 
     public function GET() {
@@ -41,16 +51,25 @@ class ResultadoMomo extends RESTObject {
         $this->setResult (
             array (
                 'status' => 'OK',
+                'votacao' => $this->votacao,
                 'content' => (object) $result
             )
         );
     }
 
     public function POST() {
-        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'POST');
+        //Verificar se a votacao ainda esta em aberto
+        
+        //Verificar autenticacao de secure key
+        
+        //verificar autenticacao de iddevice e hash_key
+        
+        //verificar se iddedevice ainda nao votou
+        
+        //votar
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplementedException ('ResultadoMomo', 'PUT');
+        throw new RESTMethodNotImplementedException ('VotarMomo', 'PUT');
     }
 }

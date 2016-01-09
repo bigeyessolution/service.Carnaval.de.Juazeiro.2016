@@ -22,10 +22,10 @@
  *
  * @author vanlivre
  */
-class AbstractAuth{
+abstract class AbstractAuth{
     /**
      * 
      * @return boolean
      */
-    public function checkAuth();
+    abstract public function checkAuth();
 }

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2015 vanlivre
+ * Copyright (C) 2016 vanlivre
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,20 +18,13 @@
  */
 
 /**
- * Description of AbstractException
+ * Description of SecureDeviceHash
  *
  * @author vanlivre
  */
-class AbstractException extends Exception {
-    public function printJSON() {
-		header ('application/json');
-	}
-	
-	public function getJSON () {
-		$result = array(
-			'error' => $this->getCode(),
-			'message' => $this->getMessage(),
-			'object' => $this->getFile()
-		);
-	}
+class SecureDeviceHash extends AbstractAuth {
+    public function checkAuth() {
+        
+    }
+
 }

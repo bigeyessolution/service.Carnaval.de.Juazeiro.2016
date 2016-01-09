@@ -46,16 +46,33 @@ class Device extends RESTObject {
         
         $db = Database::getDatabase();
         
-        $st = $db->select('device', $where);
-        //@TODO verificação
-        while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
-            $result [] = (object) $row;
+//        $st = $db->select('device', $where);
+//        //@TODO verificação
+//        while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
+//            $iddevice = $row['iddevice'];
+//            $result [] = (object) array(
+//                'iddevice' => $row['iddevice']
+//            );
+//        }
+        
+        $st = $db->select('device_votou_momo', $where);
+        
+        if ($st) {
+            $result [] = (object) array (
+                'votou_momo' => ($st->fetch() !== FALSE)
+                );
+        } else {
+            //throw new RESTObjectException ('System error');
         }
-        //verificar se já votou no rei momo
-         //   $result_aux = array();
-            
-        //            = $db->select('device', 'iddevice = ' . $params['iddevice']);
-        //verificar se já votou na rainha
+        
+        $st = $db->select('device_votou_rainha', $where);        
+        if ($st !== FALSE) {
+            $result [] = (object) array (
+                'votou_rainha' => ($st->fetch() !== FALSE)
+                );
+        } else {
+            //throw new RESTObjectException ('System error');
+        }
         
         $this->setResult (
             array (
@@ -66,9 +83,9 @@ class Device extends RESTObject {
     }
 
     public function POST() {
-        //autenticar app
         
-        //throw new RESTMethodNotImplemented ('Device', 'POST');
+        (new SecureKeyAuth())->checkAuth(); //Verificando secure key
+        
         $result = Array();
         
         $params = $this->getPostParams();
