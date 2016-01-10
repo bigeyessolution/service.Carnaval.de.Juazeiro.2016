@@ -84,7 +84,9 @@ class Device extends RESTObject {
 
     public function POST() {
         
-        (new SecureKeyAuth())->checkAuth(); //Verificando secure key
+        $sk = new SecureKeyAuth();
+        
+        $sk->checkAuth(); //Verificando secure key
         
         $result = Array();
         

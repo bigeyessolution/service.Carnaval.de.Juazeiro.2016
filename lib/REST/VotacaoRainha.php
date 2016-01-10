@@ -65,9 +65,12 @@ class VotacaoRainha extends RESTObject {
             throw new RESTObjectException ('Votações encerradas', $agora);
         }
         
-        (new SecureKeyAuth())->checkAuth();
+        $sk = new SecureKeyAuth();
+        $sd = new SecureDeviceHash();
         
-        (new SecureDeviceHash())->checkAuth();
+        $sk->checkAuth();
+        
+        $sd->checkAuth();
         
         $params = $this->getPostParams();
         
