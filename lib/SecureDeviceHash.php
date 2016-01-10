@@ -24,7 +24,35 @@
  */
 class SecureDeviceHash extends AbstractAuth {
     public function checkAuth() {
+        $params = $this->getPostParams();
         
+        $db = Database::getDatabase();
+        
+        if ($db->select(
+                'device', 
+                "iddevice = ${params['iddevice']} and hash_key = '${params['hash_key']}'"
+            )->fetch()) {
+            return TRUE;
+        } else {
+           throw new RESTObjectException ('This device has not permission');
+        }
     }
-
+    
+    private function getPostParams () {
+        $params = array();
+        
+        if (isset($_POST['iddevice'])) {
+            $params ['iddevice'] = intval($_POST['iddevice']);
+        }
+        
+        if (isset($_POST['hash_key'])) {
+            $params ['hash_key'] = verify_security_string($_POST['hash_key']);
+        }
+                
+        if (sizeof($params) != 2) {
+            throw new RESTObjectException ('Missed params');
+        }
+        
+        return $params;
+    }
 }

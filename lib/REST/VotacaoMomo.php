@@ -58,18 +58,79 @@ class VotacaoMomo extends RESTObject {
     }
 
     public function POST() {
-        //Verificar se a votacao ainda esta em aberto
+        $fim = Application::getConf('votacao')->fim;
+        $agora = time;
+        
+        if ($agora > $fim) {
+            throw new RESTObjectException ('Votações encerradas', $agora);
+        }
         
         (new SecureKeyAuth())->checkAuth();
         
         (new SecureDeviceHash())->checkAuth();
         
-        //verificar se iddedevice ainda nao votou
+        $params = $this->getPostParams();
         
-        //votar
+        $db = Database::getDatabase();
+        
+        if ($db->select(
+                'device_votou_momo', 
+                "iddevice = ${params['iddevice']}"
+            )->fetch()) {
+           throw new RESTObjectException ('Você já votou para rainha');
+        }
+        
+        try {
+            $db->beginTransaction();
+            
+            $flag = false;
+            
+            //inserir registro votado
+            $flag = $db->exec (
+                    "INSERT INTO device_votou_momo (iddevice) VALUES (${params['iddevice']})") ? 
+                    TRUE : FALSE;
+            
+            //inserir registro
+            if ($flag) {
+                $flag = $db->exec (
+                        "INSERT INTO votos_momo (idmomo) VALUES (${params['idmomo']})") ? 
+                        TRUE : FALSE;
+            }
+            
+            if ($flag) {
+                $db->commit();
+            } else {
+                $db->rollBack();
+                throw new RESTObjectException('Database insert fail');
+            }
+            
+            $this->GET();
+        } catch (PDOException $ex) {
+            $db->rollBack();
+            
+            throw new RESTObjectException('Database insert fail');
+        }
     }
 
     public function PUT() {
         throw new RESTMethodNotImplementedException ('VotarMomo', 'PUT');
+    }
+    
+    public function getPostParams () {
+        $params = array();
+        
+        if (isset($_POST['idmomo'])) {
+            $params ['idmomo'] = intval($_POST['idmomo']);
+        }
+        
+        if (isset($_POST['iddevice'])) {
+            $params ['iddevice'] = intval($_POST['iddevice']);
+        }
+        
+        if (sizeof($params) != 2) {
+            throw new RESTObjectException ('Missed params for POST method', 0);
+        }
+        
+        return $params;
     }
 }
