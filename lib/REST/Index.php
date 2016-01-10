@@ -29,11 +29,13 @@ class Index extends RESTObject {
     }
 
     public function GET() {
-        $this->setContentType(self::HTML_CONTENT_TYPE);
+//        $this->setContentType(self::HTML_CONTENT_TYPE);
+//        
+//        $this->setResult('<html><title>#CarnaJua2016</title><body>'
+//                . ''
+//                . '</body></html>');
         
-        $this->setResult('<html><title>#CarnaJua2016</title><body>'
-                . ''
-                . '</body></html>');
+        header('Location: http://www2.juazeiro.ba.gov.br', TRUE);
     }
 
     public function POST() {
