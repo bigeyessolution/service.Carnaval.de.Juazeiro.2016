@@ -52,7 +52,7 @@ class VotacaoRainha extends RESTObject {
             array (
                 'status' => 'OK',
                 'votacao' => $this->votacao,
-                'content' => (object) $result
+                'content' => $result
             )
         );
     }

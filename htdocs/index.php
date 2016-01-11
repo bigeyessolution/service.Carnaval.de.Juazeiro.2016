@@ -19,6 +19,8 @@
 
 require_once '../environment.php';
 
+header('Access-Control-Allow-Origin: *');
+
 try {
     
     Router::init();

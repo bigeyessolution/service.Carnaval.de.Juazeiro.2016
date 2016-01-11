@@ -52,7 +52,7 @@ class VotacaoMomo extends RESTObject {
             array (
                 'status' => 'OK',
                 'votacao' => $this->votacao,
-                'content' => (object) $result
+                'content' => $result
             )
         );
     }
@@ -80,7 +80,7 @@ class VotacaoMomo extends RESTObject {
                 'device_votou_momo', 
                 "iddevice = ${params['iddevice']}"
             )->fetch()) {
-           throw new RESTObjectException ('Você já votou para rainha');
+           throw new RESTObjectException ('Você já votou para momo');
         }
         
         try {
