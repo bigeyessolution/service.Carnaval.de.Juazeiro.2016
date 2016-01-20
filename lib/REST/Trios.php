@@ -55,7 +55,7 @@ class Trios extends RESTObject {
             }
         }
         
-        $this->setContentType(array ("status" => "OK", "content" => $result_trios));
+        $this->setResult(array ("status" => "OK", "content" => $result_trios));
     }
 
     public function POST() {
