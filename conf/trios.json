@@ -1,152 +1,212 @@
 [
     {
         "serial": "",
-        "trio": "",
+        "trio": "megalider",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Banda Voa Voa",
+                "inicio": 1453503600,
+                "fim": 1453514400
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Banda Nanaê",
+                "inicio": 1453519800,
+                "fim": 1453530600
+            },
+            {
+                "idartista": 0,
+                "nome": "Banda Mametto",
+                "inicio": 1453593600,
+                "fim": 1453604400
+            },
+            {
+                "idartista": 0,
+                "nome": "Bloco Pimentinha",
+                "inicio": 1453665600,
+                "fim": 1453676400
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "bradock",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Alan Cleber",
+                "inicio": 1453504500,
+                "fim": 1453515300
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "André Mendes",
+                "inicio": 1453523400,
+                "fim": 1453534200
+            },
+            {
+                "idartista": 0,
+                "nome": "Armandinho",
+                "inicio": 1453595400,
+                "fim": 1453606200
+            },
+            {
+                "idartista": 0,
+                "nome": "Banda Selva Branca",
+                "inicio": 1453669200,
+                "fim": 1453680000
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "porradao",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Patuka e Banda",
+                "inicio": 1453510800,
+                "fim": 1453521600
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Silas França e Convidados",
+                "inicio": 1453577400,
+                "fim": 1453577400
+            },
+            {
+                "idartista": 0,
+                "nome": "Ney Alves",
+                "inicio": 1453600800,
+                "fim": 1453611600
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "joia",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Daniela Mercury",
+                "inicio": 1453512600,
+                "fim": 1453512600
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Psirico",
+                "inicio": 1453599000,
+                "fim": 1453609800
+            },
+            {
+                "idartista": 0,
+                "nome": "Desejo de Menina Elétrico",
+                "inicio": 1453667400,
+                "fim": 1453667400
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "ramos",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Katê",
+                "inicio": 1453514400,
+                "fim": 1453514400
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "New Bis",
+                "inicio": 1453579200,
+                "fim": 1453590000
+            },
+            {
+                "idartista": 0,
+                "nome": "Bailão do Robysão",
+                "inicio": 1453606200,
+                "fim": 1453617000
+            },
+            {
+                "idartista": 0,
+                "nome": "Gatos Multicores",
+                "inicio": 1453663800,
+                "fim": 1453674600
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "concremassa",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Saulo",
+                "inicio": 1453516200,
+                "fim": 1453527000
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Bell Marques",
+                "inicio": 1453577400,
+                "fim": 1453588200
+            },
+            {
+                "idartista": 0,
+                "nome": "Ivete Sangalo",
+                "inicio": 1453674600,
+                "fim": 1453685400
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "light",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Gabriel Diniz",
+                "inicio": 1453521600,
+                "fim": 1453532400
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Luiz Caldas",
+                "inicio": 1453597200,
+                "fim": 1453608000
+            },
+            {
+                "idartista": 0,
+                "nome": "Targino Gondim e Convidados",
+                "inicio": 1453672800,
+                "fim": 1453683600
             }
         ]
         
     },
     {
         "serial": "",
-        "trio": "",
+        "trio": "nave",
         "artistas" : [
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Filhos de Zaze",
+                "inicio": 1453590000,
+                "fim": 1453600800
             },
             {
                 "idartista": 0,
-                "nome": "",
-                "inicio": 0,
-                "fim": 0
+                "nome": "Trio Granah",
+                "inicio": 1453662000,
+                "fim": 1453672800
             }
         ]
         
