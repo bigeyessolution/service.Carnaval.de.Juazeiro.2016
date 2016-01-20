@@ -29,7 +29,7 @@ class Trios extends RESTObject {
     }
 
     public function GET() {
-        $trios = Application::getConf('lastposition')->trios;
+        $trios = Application::getConf('lastpositions')->trios;
         
         $result_trios = array ();
         
