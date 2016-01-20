@@ -36,8 +36,4 @@ curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_USERAGENT, 'PHP'); 
 
-$lastpositions = json_encode(curl_exec($ch));
-
-var_dump($lastpositions);
-
-$trios = Application::getConf('trios');
+file_put_contents(BASEDIR.'conf/lastpositions.json', curl_exec($ch));
