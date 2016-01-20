@@ -29,7 +29,33 @@ class Trios extends RESTObject {
     }
 
     public function GET() {
+        $trios = Application::getConf('lastpositions')->trios;
         
+        $result_trios = array ();
+        
+        foreach ($trios as $trio) {
+            $artista = getArtista ($trio->serial);
+            
+            if ($artista == FALSE) {
+                $result_trios[] = (object) array (
+                    "serial" => $trio->serial,
+                    "lat" => $trio->lat,
+                    "lng" => $trio->lng,
+                    "idartista" => FALSE,
+                    "artista" => FALSE
+                );
+            } else {
+                $result_trios[] = (object) array (
+                    "serial" => $trio->serial,
+                    "lat" => $trio->lat,
+                    "lng" => $trio->lng,
+                    "idartista" => $artista->idartista,
+                    "artista" => $artista->nome
+                );
+            }
+        }
+        
+        $this->setResult(array ("status" => "OK", "content" => $result_trios));
     }
 
     public function POST() {
@@ -41,6 +67,30 @@ class Trios extends RESTObject {
     }
     
     private function getArtista ($serial) {
-        $trios = Application::getConf('')
+        $trios = Application::getConf('trios');
+        
+        $artistas = FALSE;
+        
+        foreach ($trios as $trio) {
+            if ($trio->serial == $serial) {
+                $artistas = $trio->artistas;
+                
+                break;
+            }
+        }
+        
+        if ($artistas == FALSE) {
+            throw new RESTObjectException("Trio não encontrado");
+        }
+        
+        $agora = time();
+        
+        foreach ($artistas as $artista) {
+            if ($artista->inicio <= $agora and $agora <= $artista->fim) {
+                return $artista;
+            }
+            
+            return FALSE;
+        }
     }
 }
