@@ -14,6 +14,19 @@
                 "nome": "",
                 "inicio": 0,
                 "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
             },
             {
                 "idartista": 0,
@@ -39,6 +52,95 @@
                 "nome": "",
                 "inicio": 0,
                 "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            },
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            },
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            },
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            },
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
+            }
+        ]
+        
+    },
+    {
+        "serial": "",
+        "trio": "",
+        "artistas" : [
+            {
+                "idartista": 0,
+                "nome": "",
+                "inicio": 0,
+                "fim": 0
             },
             {
                 "idartista": 0,
@@ -49,6 +151,5 @@
         ]
         
     }
-    
 ]
 
