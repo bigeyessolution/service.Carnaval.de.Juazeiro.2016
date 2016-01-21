@@ -102,7 +102,7 @@ class Promocao extends RESTObject {
         }
 
         if (isset($_POST['celular'])) {
-            $params ['celular'] = intval($_POST['celular']);
+            $params ['celular'] = verify_security_string($_POST['celular']);
         }
 
         if (isset($_POST['texto'])) {
