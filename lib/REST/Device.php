@@ -28,6 +28,8 @@ class Device extends RESTObject {
     }
 
     public function GET() {
+        throw new RESTMethodNotImplementedException ('Device', 'GET');
+        
         $result = Array();
         
         $params = $this->getGetParams();
@@ -83,6 +85,7 @@ class Device extends RESTObject {
     }
 
     public function POST() {
+        throw new RESTMethodNotImplementedException ('Device', 'POST');
         
         $sk = new SecureKeyAuth();
         

@@ -58,6 +58,8 @@ class VotacaoMomo extends RESTObject {
     }
 
     public function POST() {
+        throw new RESTMethodNotImplementedException ('Device', 'POST');
+        
         $fim = Application::getConf('votacao')->fim;
         $agora = time;
         
