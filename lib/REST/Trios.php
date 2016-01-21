@@ -44,14 +44,6 @@ class Trios extends RESTObject {
                     "idartista" => $artista->idartista,
                     "artista" => $artista->nome
                 );
-            } else {
-                $result_trios[] = (object) array (
-                    "serial" => $trio->serial,
-                    "lat" => $trio->lat,
-                    "lng" => $trio->lng,
-                    "idartista" => false,
-                    "artista" => false
-                );
             }
         }
         
