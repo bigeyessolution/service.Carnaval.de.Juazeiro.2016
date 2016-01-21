@@ -36,15 +36,7 @@ class Trios extends RESTObject {
         foreach ($trios as $trio) {
             $artista = $this->getArtista ($trio->serial);
             
-            if ($artista == FALSE) {
-                $result_trios[] = (object) array (
-                    "serial" => $trio->serial,
-                    "lat" => $trio->lat,
-                    "lng" => $trio->lng,
-                    "idartista" => FALSE,
-                    "artista" => FALSE
-                );
-            } else {
+            if ($artista !== FALSE) {
                 $result_trios[] = (object) array (
                     "serial" => $trio->serial,
                     "lat" => $trio->lat,
