@@ -78,7 +78,8 @@ class Trios extends RESTObject {
         $agora = time();
         
         foreach ($artistas as $artista) {
-            if ($artista->inicio <= $agora and $agora <= $artista->fim) {
+            if (true) {
+            //if ($artista->inicio <= $agora and $agora <= $artista->fim) {
                 return $artista;
             }
             
