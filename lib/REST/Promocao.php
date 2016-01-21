@@ -41,17 +41,15 @@ class Promocao extends RESTObject {
         $this->setResult (
             array (
                 'status' => 'OK',
-                'content' => (object) $result
+                'content' => $result
             )
         );
     }
 
     public function POST() {
         $sk = new SecureKeyAuth();
-        $sd = new SecureDeviceHash();
         
         $sk->checkAuth();
-        $sd->checkAuth();
 
         $params = $this->getPostParams ();
         
@@ -62,6 +60,7 @@ class Promocao extends RESTObject {
         . 'VALUES (:idartista, :nome, :celular, :texto)');
         
         $st->bindValue (':idartista', $params['idartista'], PDO::PARAM_INT);
+        $st->bindValue (':nome', $params['nome'], PDO::PARAM_STR);
         $st->bindValue (':celular', $params['celular'], PDO::PARAM_STR);
         $st->bindValue (':texto', $params['texto'], PDO::PARAM_STR);
         

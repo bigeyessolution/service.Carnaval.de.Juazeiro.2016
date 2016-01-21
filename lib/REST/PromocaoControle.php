@@ -31,7 +31,7 @@ class PromocaoControle extends RESTObject {
     public function GET() {
         (new SecureKeyAuth)->checkAuth();
         
-        $database = Database::getDatabase();
+        $db = Database::getDatabase();
         
         $result = array ();
         
@@ -44,7 +44,7 @@ class PromocaoControle extends RESTObject {
         $this->setResult (
             array (
                 'status' => 'OK',
-                'content' => (object) $result
+                'content' => $result
             )
         );
     }
