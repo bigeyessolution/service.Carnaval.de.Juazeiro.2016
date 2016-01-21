@@ -147,6 +147,11 @@
         "trio": "concremassa",
         "artistas" : [
             {
+                "idartista": 0,
+                "nome": "Teste de artista",
+                "inicio": 1453384430,
+                "fim": 1453516200
+            },{
                 "idartista": 2,
                 "nome": "Saulo",
                 "inicio": 1453516200,
