@@ -53,7 +53,26 @@ class Promocao extends RESTObject {
         $sk->checkAuth();
         $sd->checkAuth();
 
-        $params = getPostParams ();
+        $params = $this->getPostParams ();
+        
+        $db = Database::getDatabase();
+        
+        $st = $db->prepare ('INSERT INTO '
+        . 'promocao (idartista, nome, celular, texto)'
+        . 'VALUES (:idartista, :nome, :celular, :texto)');
+        
+        $st->bindValue (':idartista', $params['idartista'], PDO::PARAM_INT);
+        $st->bindValue (':celular', $params['celular'], PDO::PARAM_STR);
+        $st->bindValue (':texto', $params['texto'], PDO::PARAM_STR);
+        
+        if ($st->execute ()) {
+            $this->setResult(array(
+                'status' => 'OK',
+                'message' => 'Mensagem cadastrada com sucesso.'
+            )); 
+        } else {
+            $this->setResult($db->errorInfo());
+        }
     }
 
     public function PUT() {
@@ -74,10 +93,6 @@ class Promocao extends RESTObject {
 
     public function getPostParams () {
         $params = array();
-        
-        if (isset($_POST['iddevice'])) {
-            $params ['iddevice'] = intval($_POST['iddevice']);
-        }
 
         if (isset($_POST['idartista'])) {
             $params ['idartista'] = intval($_POST['idartista']);
@@ -95,7 +110,7 @@ class Promocao extends RESTObject {
             $params ['texto'] = verify_security_string($_POST['texto']);
         }
                 
-        if (sizeof($params) != 5) {
+        if (sizeof($params) != 4) {
             throw new RESTObjectException ('Missed params for POST method', 0);
         }
         

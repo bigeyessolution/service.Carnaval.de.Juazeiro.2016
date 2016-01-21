@@ -3,14 +3,14 @@
 header("Content-Type: application/json");
 
 $serial_dos_trios = array(
-	4354013, // check - Testado
-	4354081, // check - Testado
-	4376498, // check - Testado
-	5271302, // check
-	4228086, // check
-	4354085, // check
-	4328604, // check
-	1242066// check
+	4354013, // ok
+	4354081, // ok
+	4376498, // ok
+	5271302, // ok
+	4228086, // ---
+	4354085, // ok
+	4328604, // ok
+	1242066  // ok
 );
 
 $dbuser = '';
