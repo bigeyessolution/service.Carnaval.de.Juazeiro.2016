@@ -29,11 +29,9 @@ class PromocaoControle extends RESTObject {
     }
 
     public function GET() {
-        (new SecureKeyAuth)->checkAuth();
-        
         $db = Database::getDatabase();
         
-        $result = array ();
+        $result = Array();
         
         $st = $db->select('lista_promocao');
         
@@ -54,7 +52,7 @@ class PromocaoControle extends RESTObject {
             )
         );
     }
-
+    
     public function POST() {
         (new SecureKeyAuth)->checkAuth();
         
