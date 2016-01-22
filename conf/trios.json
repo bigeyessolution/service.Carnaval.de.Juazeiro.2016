@@ -12,8 +12,8 @@
             {
                 "idartista": 11,
                 "nome": "Banda Nanaê",
-                "inicio": 1453519800,
-                "fim": 1453530600
+                "inicio": 1453518000,
+                "fim": 1453528800
             },
             {
                 "idartista": 12,
@@ -94,7 +94,7 @@
                 "idartista": 4,
                 "nome": "Daniela Mercury",
                 "inicio": 1453512600,
-                "fim": 1453512600
+                "fim": 1453519800
             },
             {
                 "idartista": 5,
@@ -118,8 +118,8 @@
             {
                 "idartista": 7,
                 "nome": "Katê",
-                "inicio": 1453514400,
-                "fim": 1453514400
+                "inicio": 1453516200,
+                "fim": 1453523400
             },
             {
                 "idartista": 20,
@@ -149,8 +149,8 @@
             {
                 "idartista": 2,
                 "nome": "Saulo",
-                "inicio": 1453516200,
-                "fim": 1453527000
+                "inicio": 1453514400,
+                "fim": 1453521600
             },
             {
                 "idartista": 3,
@@ -174,8 +174,8 @@
             {
                 "idartista": 23,
                 "nome": "Gabriel Diniz",
-                "inicio": 1453521600,
-                "fim": 1453532400
+                "inicio": 1453519800,
+                "fim": 1453530600
             },
             {
                 "idartista": 6,
