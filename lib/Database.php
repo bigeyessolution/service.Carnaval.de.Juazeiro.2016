@@ -21,6 +21,8 @@ class Database extends PDO {
     public static function getDatabase() {
         if (Database::$db === FALSE) {
             Database::$db = new Database();
+            
+            Database::$db->exec("SET CHARACTER SET utf8");
         }
         
         return Database::$db;
