@@ -37,14 +37,20 @@ class PromocaoControle extends RESTObject {
         
         $st = $db->select('lista_promocao');
         
+        $recordsn = 0;
+        
         while ($row = $st->fetch(PDO::FETCH_ASSOC)) { 
             $result [] = (object) $row;
+            
+            $recordsn ++;
         }
         
         $this->setResult (
             array (
                 'status' => 'OK',
-                'content' => $result
+                'records' => $result,
+                'queryRecordCount' => $recordsn,
+                'totalRecordCount' => $recordsn
             )
         );
     }
