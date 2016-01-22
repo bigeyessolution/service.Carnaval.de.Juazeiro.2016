@@ -37,20 +37,29 @@ class PromocaoControle extends RESTObject {
         
         $recordsn = 0;
         
+        header('Content-Type: application/json');
+        
+        print '{"status":"OK","records":[';
+        $virg = '';
         while ($row = $st->fetch(PDO::FETCH_ASSOC)) { 
-            $result [] = (object) $row;
+            //$result [] = (object) $row;
+            
+            print $virg.json_encode($row);
+            
+            $virg = ',';
             
             $recordsn ++;
         }
-        
-        $this->setResult (
-            array (
-                'status' => 'OK',
-                'records' => $result,
-                'queryRecordCount' => $recordsn,
-                'totalRecordCount' => $recordsn
-            )
-        );
+        print '],"queryRecordCount":'.$recordsn.',"totalRecordCount":'.$recordsn.'}';
+        exit();
+//        $this->setResult (
+//            array (
+//                'status' => 'OK',
+//                'records' => $result,
+//                'queryRecordCount' => $recordsn,
+//                'totalRecordCount' => $recordsn
+//            )
+//        );
     }
     
     public function POST() {
