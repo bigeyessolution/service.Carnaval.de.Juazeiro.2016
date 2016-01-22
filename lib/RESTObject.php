@@ -48,7 +48,7 @@ abstract class RESTObject {
                 print $this->result;
         }
         
-        flush();
+        file_put_contents(BASEDIR.'log', json_last_error_msg());
     }
     
     public function printJSON () {        
