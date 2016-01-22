@@ -37,7 +37,7 @@
             {
                 "idartista": 14,
                 "nome": "Alan Cleber",
-                "inicio": 1453384430,
+                "inicio": 1453504500,
                 "fim": 1453515300
             },
             {
@@ -62,7 +62,7 @@
         
     },
     {
-        "serial": "4228086",
+        "serial": "4273933",
         "trio": "porradao",
         "artistas" : [
             {
@@ -105,7 +105,7 @@
             {
                 "idartista": 19,
                 "nome": "Desejo de Menina Elétrico",
-                "inicio": 1453384430,
+                "inicio": 1453667400,
                 "fim": 1453667400
             }
         ]
@@ -118,7 +118,7 @@
             {
                 "idartista": 7,
                 "nome": "Katê",
-                "inicio": 1453384430,
+                "inicio": 1453514400,
                 "fim": 1453514400
             },
             {
@@ -149,7 +149,7 @@
             {
                 "idartista": 2,
                 "nome": "Saulo",
-                "inicio": 1453384430,
+                "inicio": 1453516200,
                 "fim": 1453527000
             },
             {
@@ -180,7 +180,7 @@
             {
                 "idartista": 6,
                 "nome": "Luiz Caldas",
-                "inicio": 1453384430,
+                "inicio": 1453597200,
                 "fim": 1453608000
             },
             {
