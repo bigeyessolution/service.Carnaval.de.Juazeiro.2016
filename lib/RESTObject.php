@@ -25,7 +25,7 @@ abstract class RESTObject {
     
     public function getJSON () {
         return json_encode (
-            utf8_encode($this->result), 
+            $this->result, 
             JSON_NUMERIC_CHECK | 
             JSON_PRESERVE_ZERO_FRACTION | 
             JSON_ERROR_NONE
