@@ -47,6 +47,8 @@ abstract class RESTObject {
             default :
                 print $this->result;
         }
+        
+        flush();
     }
     
     public function printJSON () {        
