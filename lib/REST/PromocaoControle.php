@@ -42,7 +42,7 @@ class PromocaoControle extends RESTObject {
             
             $recordsn ++;
         }
-        
+        var_dump($result);
         $this->setResult (
             array (
                 'status' => 'OK',
