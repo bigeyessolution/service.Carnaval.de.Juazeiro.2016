@@ -26,6 +26,12 @@
                 "nome": "Bloco Pimentinha",
                 "inicio": 1453665600,
                 "fim": 1453676400
+            },
+            {
+                "idartista": 20,
+                "nome": "New Bis",
+                "inicio": 1453608000,
+                "fim": 1453618800
             }
         ]
         
@@ -53,10 +59,10 @@
                 "fim": 1453606200
             },
             {
-                "idartista": 8,
-                "nome": "Banda Selva Branca",
-                "inicio": 1453669200,
-                "fim": 1453680000
+                "idartista": 19,
+                "nome": "Desejo de Menina Elétrico",
+                "inicio": 1453667400,
+                "fim": 1453667400
             }
         ]
         
@@ -103,10 +109,10 @@
                 "fim": 1453609800
             },
             {
-                "idartista": 19,
-                "nome": "Desejo de Menina Elétrico",
-                "inicio": 1453667400,
-                "fim": 1453667400
+                "idartista": 8,
+                "nome": "Banda Selva Branca",
+                "inicio": 1453669200,
+                "fim": 1453680000
             }
         ]
         
@@ -122,22 +128,16 @@
                 "fim": 1453523400
             },
             {
-                "idartista": 20,
-                "nome": "New Bis",
-                "inicio": 1453579200,
-                "fim": 1453590000
-            },
-            {
                 "idartista": 21,
                 "nome": "Bailão do Robysão",
-                "inicio": 1453606200,
-                "fim": 1453617000
+                "inicio": 1453602600,
+                "fim": 1453613400
             },
             {
-                "idartista": 22,
-                "nome": "Gatos Multicores",
-                "inicio": 1453663800,
-                "fim": 1453674600
+                "idartista": 26,
+                "nome": "Trio Granah",
+                "inicio": 1453662000,
+                "fim": 1453672800
             }
         ]
         
