@@ -79,7 +79,7 @@ class Trios extends RESTObject {
         
         foreach ($artistas as $artista) {
             $inicio = $artista->inicio;
-            $fim = $artista->fim;
+            $fim = $inicio + 10800;
 
             if ($inicio <= $agora && $agora <= $fim) {
                 return $artista;
