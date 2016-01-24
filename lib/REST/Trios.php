@@ -59,24 +59,43 @@ class Trios extends RESTObject {
     }
     
     private function getArtista ($serial) {
+    	if (time () > (new Date('01/24/2016 23:00:00'))->getTime()) {
+    		return FALSE;
+    	}
+
         $trios = Application::getConf('trios');
         
         $artistas = FALSE;
-        
+
+        foreach ($trios as $trio) {
+            if ($trio->serial == $serial) {
+                return $trio;
+            }
+        }
+    }
+
+    /**
+     * @deprecated
+     */
+    private function getArtistaOrig ($serial) {
+        $trios = Application::getConf('trios');
+
+        $artistas = FALSE;
+
         foreach ($trios as $trio) {
             if ($trio->serial == $serial) {
                 $artistas = $trio->artistas;
-                
+
                 break;
             }
         }
-        
+
         if ($artistas == FALSE) {
             throw new RESTObjectException("Trio não encontrado");
         }
-        
+
         $agora = time();
-        
+
         foreach ($artistas as $artista) {
             $inicio = $artista->inicio;
             $fim = $inicio + 10800;
@@ -84,8 +103,8 @@ class Trios extends RESTObject {
             if ($inicio <= $agora && $agora <= $fim) {
                 return $artista;
             }
-            
+
             return FALSE;
         }
-    }
+    }'
 }

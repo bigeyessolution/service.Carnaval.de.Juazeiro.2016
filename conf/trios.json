@@ -2,92 +2,57 @@
     {
         "serial": "4354013",
         "trio": "megalider",
-        "artistas" : [
-            {
-                "idartista": 27,
-                "nome": "Banda Mirage",
-                "inicio": 1453663800,
-                "fim": 1453674600
-            }
-        ]
-        
+        "idartista": 27,
+        "nome": "Banda Mirage",
+        "inicio": 1453663800,
+        "fim": 1453674600
     },
     {
         "serial": "4354085",
         "trio": "bradock",
-        "artistas" : [
-            {
-                "idartista": 19,
-                "nome": "Desejo de Menina Elétrico",
-                "inicio": 1453667400,
-                "fim": 1453678200
-            }
-        ]
-        
+        "idartista": 19,
+        "nome": "Desejo de Menina Elétrico",
+        "inicio": 1453667400,
+        "fim": 1453678200
     },
     {
         "serial": "4227739",
         "trio": "porradao",
-        "artistas" : [
-            {
-                "idartista": 28,
-                "nome": "Real Som",
-                "inicio": 1453671000,
-                "fim": 1453681800
-            }
-        ]
-        
+        "idartista": 28,
+        "nome": "Real Som",
+        "inicio": 1453671000,
+        "fim": 1453681800
     },
     {
         "serial": "4328604",
         "trio": "joia",
-        "artistas" : [
-            {
-                "idartista": 8,
-                "nome": "Banda Selva Branca",
-                "inicio": 1453669200,
-                "fim": 1453680000
-            }
-        ]
-        
+        "idartista": 8,
+        "nome": "Banda Selva Branca",
+        "inicio": 1453669200,
+        "fim": 1453680000
     },
     {
         "serial": "4354081",
         "trio": "ramos",
-        "artistas" : [
-            {
-                "nome": "Trio Granah",
-                "inicio": 1453662000,
-                "fim": 1453672800
-            }
-        ]
-        
+        "idartista": 26,
+        "nome": "Trio Granah",
+        "inicio": 1453662000,
+        "fim": 1453672800
     },
     {
         "serial": "5271302",
         "trio": "concremassa",
-        "artistas" : [
-            {
-                "idartista": 1,
-                "nome": "Ivete Sangalo",
-                "inicio": 1453674600,
-                "fim": 1453685400
-            }
-        ]
-        
+        "idartista": 1,
+        "nome": "Ivete Sangalo",
+        "inicio": 1453674600,
+        "fim": 1453685400
     },
     {
         "serial": "4376498",
         "trio": "light",
-        "artistas" : [
-            {
-                "idartista": 24,
-                "nome": "Targino Gondim e Convidados",
-                "inicio": 1453672800,
-                "fim": 1453683600
-            }
-        ]
-        
+        "idartista": 24,
+        "nome": "Targino Gondim e Convidados",
+        "inicio": 1453672800,
+        "fim": 1453683600
     }
 ]
-
