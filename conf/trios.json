@@ -4,34 +4,10 @@
         "trio": "megalider",
         "artistas" : [
             {
-                "idartista": 10,
-                "nome": "Banda Voa Voa",
-                "inicio": 1453503600,
-                "fim": 1453514400
-            },
-            {
-                "idartista": 11,
-                "nome": "Banda Nanaê",
-                "inicio": 1453518000,
-                "fim": 1453528800
-            },
-            {
-                "idartista": 12,
-                "nome": "Banda Mametto",
-                "inicio": 1453593600,
-                "fim": 1453604400
-            },
-            {
-                "idartista": 13,
-                "nome": "Bloco Pimentinha",
-                "inicio": 1453665600,
-                "fim": 1453676400
-            },
-            {
-                "idartista": 20,
-                "nome": "New Bis",
-                "inicio": 1453608000,
-                "fim": 1453618800
+                "idartista": 27,
+                "nome": "Banda Mirage",
+                "inicio": 1453663800,
+                "fim": 1453674600
             }
         ]
         
@@ -41,28 +17,10 @@
         "trio": "bradock",
         "artistas" : [
             {
-                "idartista": 14,
-                "nome": "Alan Cleber",
-                "inicio": 1453504500,
-                "fim": 1453515300
-            },
-            {
-                "idartista": 15,
-                "nome": "André Mendes",
-                "inicio": 1453523400,
-                "fim": 1453534200
-            },
-            {
-                "idartista": 9,
-                "nome": "Armandinho",
-                "inicio": 1453595400,
-                "fim": 1453606200
-            },
-            {
                 "idartista": 19,
                 "nome": "Desejo de Menina Elétrico",
                 "inicio": 1453667400,
-                "fim": 1453667400
+                "fim": 1453678200
             }
         ]
         
@@ -72,22 +30,10 @@
         "trio": "porradao",
         "artistas" : [
             {
-                "idartista": 16,
-                "nome": "Patuka e Banda",
-                "inicio": 1453510800,
-                "fim": 1453521600
-            },
-            {
-                "idartista": 17,
-                "nome": "Silas França e Convidados",
-                "inicio": 1453575600,
-                "fim": 1453586400
-            },
-            {
-                "idartista": 18,
-                "nome": "Ney Alves",
-                "inicio": 1453600800,
-                "fim": 1453611600
+                "idartista": 28,
+                "nome": "Real Som",
+                "inicio": 1453671000,
+                "fim": 1453681800
             }
         ]
         
@@ -96,18 +42,6 @@
         "serial": "4328604",
         "trio": "joia",
         "artistas" : [
-            {
-                "idartista": 4,
-                "nome": "Daniela Mercury",
-                "inicio": 1453512600,
-                "fim": 1453519800
-            },
-            {
-                "idartista": 5,
-                "nome": "Psirico",
-                "inicio": 1453599000,
-                "fim": 1453609800
-            },
             {
                 "idartista": 8,
                 "nome": "Banda Selva Branca",
@@ -122,18 +56,6 @@
         "trio": "ramos",
         "artistas" : [
             {
-                "idartista": 7,
-                "nome": "Katê",
-                "inicio": 1453516200,
-                "fim": 1453523400
-            },
-            {
-                "idartista": 21,
-                "nome": "Bailão do Robysão",
-                "inicio": 1453602600,
-                "fim": 1453613400
-            },
-            {
                 "nome": "Trio Granah",
                 "inicio": 1453662000,
                 "fim": 1453672800
@@ -145,18 +67,6 @@
         "serial": "5271302",
         "trio": "concremassa",
         "artistas" : [
-            {
-                "idartista": 2,
-                "nome": "Saulo",
-                "inicio": 1453514400,
-                "fim": 1453521600
-            },
-            {
-                "idartista": 3,
-                "nome": "Bell Marques",
-                "inicio": 1453577400,
-                "fim": 1453588200
-            },
             {
                 "idartista": 1,
                 "nome": "Ivete Sangalo",
@@ -171,41 +81,10 @@
         "trio": "light",
         "artistas" : [
             {
-                "idartista": 23,
-                "nome": "Gabriel Diniz",
-                "inicio": 1453519800,
-                "fim": 1453530600
-            },
-            {
-                "idartista": 6,
-                "nome": "Luiz Caldas",
-                "inicio": 1453597200,
-                "fim": 1453608000
-            },
-            {
                 "idartista": 24,
                 "nome": "Targino Gondim e Convidados",
                 "inicio": 1453672800,
                 "fim": 1453683600
-            }
-        ]
-        
-    },
-    {
-        "serial": "1242066",
-        "trio": "nave",
-        "artistas" : [
-            {
-                "idartista": 25,
-                "nome": "Filhos de Zaze",
-                "inicio": 1453590000,
-                "fim": 1453600800
-            },
-            {
-                "idartista": 26,
-                "nome": "Trio Granah",
-                "inicio": 1453662000,
-                "fim": 1453672800
             }
         ]
         
