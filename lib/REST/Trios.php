@@ -59,7 +59,7 @@ class Trios extends RESTObject {
     }
     
     private function getArtista ($serial) {
-    	if (time () > (new Date('01/24/2016 23:00:00'))->getTime()) {
+    	if ((new Date())->getTime() > (new Date('01/24/2016 23:00:00'))->getTime()) {
     		return FALSE;
     	}
 
