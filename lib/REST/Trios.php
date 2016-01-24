@@ -59,13 +59,7 @@ class Trios extends RESTObject {
     }
     
     private function getArtista ($serial) {
-    	if ((new Date())->getTime() > (new Date('01/24/2016 23:00:00'))->getTime()) {
-    		return FALSE;
-    	}
-
         $trios = Application::getConf('trios');
-        
-        $artistas = FALSE;
 
         foreach ($trios as $trio) {
             if ($trio->serial == $serial) {
