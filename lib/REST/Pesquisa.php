@@ -27,7 +27,7 @@ class Pesquisa extends RESTObject {
         throw new RESTMethodNotImplementedException ('Pesquisa', 'DELETE');
     }
 
-    public function GET() {
+    public function GET() {echo "Teste";
         throw new RESTMethodNotImplementedException ('Pesquisa', 'POST');
     }
 
