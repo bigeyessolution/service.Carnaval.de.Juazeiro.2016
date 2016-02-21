@@ -28,7 +28,47 @@ class Pesquisa extends RESTObject {
     }
 
     public function GET() {
-        throw new RESTMethodNotImplementedException ('Pesquisa', 'GET');
+//        throw new RESTMethodNotImplementedException ('Pesquisa', 'GET');
+        
+        $questoes = Application::getConf('questoes');
+        
+        $result = array();
+        
+        //@todo Pegar total de registros
+        $db = Database::getDatabase();
+        
+        $total = $db->query('select count(*) from pesquisa')->fetchColumn();
+                
+        foreach ($questoes as $questao) {
+            $numero = $questao->questao;
+            $tabela = 'count_' . $questao->questao;
+            $tipo = $questao->tipo;
+            $descricao = $questao->descricao;
+            
+            $st = $db->query("select * from $tabela");
+            
+            if ($tipo == 'int') {
+                $result[] = (object) array (
+                    "questao" => $numero,
+                    "descricao" => $descricao,
+                    "respostas" => $st->fetch(PDO::FETCH_ASSOC)
+                );
+            } else {
+                $result[] = (object) array (
+                    "questao" => $numero,
+                    "descricao" => $descricao,
+                    "respostas" => $st->fetchAll(PDO::FETCH_OBJ)
+                );
+            }
+        }
+        
+        $this->setResult(array (
+            'status' => 'OK',
+            'content' => (object) array (
+                'votos' => $total,
+                'respostas' => $result
+            )
+        ));
     }
 
     public function POST() {
