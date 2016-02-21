@@ -24,15 +24,15 @@
  */
 class Pesquisa extends RESTObject {
     public function DELETE() {
-        throw new RESTMethodNotImplementedException ('Trios', 'DELETE');
+        throw new RESTMethodNotImplementedException ('Pesquisa', 'DELETE');
     }
 
     public function GET() {
-        throw new RESTMethodNotImplementedException ('Trios', 'POST');
+        throw new RESTMethodNotImplementedException ('Pesquisa', 'POST');
     }
 
     public function POST() {
-//        throw new RESTMethodNotImplementedException ('Trios', 'POST');
+//        throw new RESTMethodNotImplementedException ('Pesquisa', 'POST');
         
         $sk = new SecureKeyAuth();
         $sk->checkAuth();
@@ -69,7 +69,7 @@ class Pesquisa extends RESTObject {
     }
 
     public function PUT() {
-        throw new RESTMethodNotImplementedException ('Trios', 'PUT');
+        throw new RESTMethodNotImplementedException ('Pesquisa', 'PUT');
     }
     
     public function getPostParams () {
