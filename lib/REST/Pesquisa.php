@@ -48,16 +48,16 @@ class Pesquisa extends RESTObject {
             $st = $db->query("select * from $tabela");
             
             if ($tipo == 'int') {
-                $result[] = array (
+                $result[] = (object) array (
                     "questao" => $numero,
                     "descricao" => $descricao,
-                    "respostas" => $st->fetch(PDO::FETCH_ASSOC)
+                    "respostas" => (array) $st->fetch(PDO::FETCH_ASSOC)
                 );
             } else {
                 $result[] = (object) array (
                     "questao" => $numero,
                     "descricao" => $descricao,
-                    "respostas" => $st->fetchAll(PDO::FETCH_OBJ)
+                    "respostas" => (object) $st->fetchAll(PDO::FETCH_OBJ)
                 );
             }
         }
