@@ -1,98 +1,62 @@
 [
     {
         "questao": "q1",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação do CarnaJua2016",
+        "tipo": "int"
     },
     {
         "questao": "q2",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da qualidade das atrações no circuito Ivete Sangalo",
+        "tipo": "int"
     },
     {
         "questao": "q3",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da qualidade das atrações no circuito Luiz Galvão",
+        "tipo": "int"
     },
     {
         "questao": "q4",
-        "descricao": "",
-        "tipo": "text",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Revelações do CarnaJua2016",
+        "tipo": "text"
     },
     {
         "questao": "q5",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da qualidade dos trios",
+        "tipo": "int"
     },
     {
         "questao": "q6",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da limpeza e iluminação do circuito",
+        "tipo": "int"
     },
     {
         "questao": "q7",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da segurança no CarnaJua2016",
+        "tipo": "int"
     },
     {
         "questao": "q8",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Avaliação da qualidade dos alimentos e bebidas vendidos",
+        "tipo": "int"
     },
     {
         "questao": "q9",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Melhores dias para o CarnaJua2017",
+        "tipo": "int"
     },
     {
         "questao": "q10",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Melhor localização dos camarotes para o CarnaJua2017",
+        "tipo": "int"
     },
     {
         "questao": "q11",
-        "descricao": "",
-        "tipo": "int",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Quais atrações querem ver novamente no CarnaJua2017",
+        "tipo": "int"
     },
     {
         "questao": "q12",
-        "descricao": "",
-        "tipo": "text",
-        "valores": [
-            { "ordem": 0, "descricao": "" }
-        ]
+        "descricao": "Quais atrações ficarm de fora?",
+        "tipo": "text"
     }
 ]
