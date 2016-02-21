@@ -42,7 +42,7 @@ class Pesquisa extends RESTObject {
         $fields = implode(',', array_keys($params));
         
         $keyparams = implode (',', array_map(function ($value) { return ':'.$value; }, $params));
-print_r($keyparams);
+        
         $db = Database::getDatabase();
         
         try {
