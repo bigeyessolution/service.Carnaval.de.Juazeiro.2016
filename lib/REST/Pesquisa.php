@@ -59,7 +59,14 @@ class Pesquisa extends RESTObject {
                     'status' => 'OK'
                 )); 
             } else {
-                $this->setResult($db->errorInfo());
+                //$this->setResult($db->errorInfo());
+                
+                $this->setResult(array(
+                    'status' => 'ERROR',
+                    'fields' => $fields,
+                    'keyparams' => $keyparams,
+                    'sqlerrorcode' => $db->errorCode()
+                )); 
             }
             
         } catch (PDOException $ex) {            
