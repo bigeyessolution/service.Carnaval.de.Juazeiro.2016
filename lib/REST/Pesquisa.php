@@ -56,7 +56,7 @@ class Pesquisa extends RESTObject {
             } else {
                 $rows = array ();
                 
-                while ( $row = $st->fetch(PDO::FETCH_OBJ) ) {
+                while ( $row = $st->fetch(PDO::FETCH_ASSOC) ) {
                     $rows[] = (object) array (
                         "escolha" => $row[$numero],
                         "Total" => $row['Total']
