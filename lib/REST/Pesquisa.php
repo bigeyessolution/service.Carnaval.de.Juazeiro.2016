@@ -54,10 +54,19 @@ class Pesquisa extends RESTObject {
                     "respostas" => (array) $st->fetch(PDO::FETCH_ASSOC)
                 );
             } else {
+                $rows = array ();
+                
+                while ( $row = $st->fetch(PDO::FETCH_OBJ) ) {
+                    $rows[] = (object) array (
+                        "escolha" => $row[$numero],
+                        "Total" => $row['Total']
+                    );
+                }
+                                
                 $result[] = (object) array (
                     "questao" => $numero,
                     "descricao" => $descricao,
-                    "respostas" => (object) $st->fetchAll(PDO::FETCH_OBJ)
+                    "respostas" => $rows
                 );
             }
         }
