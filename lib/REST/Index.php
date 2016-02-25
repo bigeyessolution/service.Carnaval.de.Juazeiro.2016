@@ -30,7 +30,7 @@ class Index extends RESTObject {
 
     public function GET() {
         $this->setResult(file_get_contents('index.html'));
-//        $this->setContentType(self::HTML_CONTENT_TYPE);
+        $this->setContentType(self::HTML_CONTENT_TYPE);
 //        
 //        $this->setResult('<html><title>#CarnaJua2016</title><body>'
 //                . ''
